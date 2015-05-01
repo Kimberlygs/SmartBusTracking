@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WikitudeSample</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>WikitudeSample</AssemblyName>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchExtraArgs>-v -v -v</MtouchExtraArgs>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\monotouch\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\monotouch\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Utils\" />
+    <Folder Include="ViewController\" />
+    <Folder Include="ViewController\Screenshot\" />
+    <Folder Include="Resources\ARchitectExamples\" />
+    <Folder Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Utils\GeoUtils.cs" />
+    <Compile Include="ViewController\ARViewController.cs" />
+    <Compile Include="ViewController\RecentUrlsViewController.cs" />
+    <Compile Include="ViewController\ApplicationModel\ApplicationModelARViewController.cs" />
+    <Compile Include="ViewController\PresentingPoiDetails\PresentingPoiDetailsARViewController.cs" />
+    <Compile Include="ViewController\Screenshot\ScreenshotARViewController.cs" />
+    <Compile Include="ViewController\ExampleListViewController.cs" />
+    <Compile Include="ViewController\PresentingPoiDetails\PoiDetailViewController.cs" />
+    <Compile Include="ViewController\PresentingPoiDetails\PoiDetailViewController.designer.cs">
+      <DependentUpon>PoiDetailViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="IndexList.json" />
+    <BundleResource Include="Resources\ARchitectExamples\ade.js" />
+    <BundleResource Include="Resources\ARchitectExamples\target_images_examples.pdf" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\js\addingRadar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\js\ade.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_2_AddingRadar\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\js\ade.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\js\nativePoiDetail.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\icon_bus_selected.png" />
+    <BundleResource Include="Resources\pattern.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\assets\icon_bus_idle.png" />
+    <BundleResource Include="Resources\bus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\5_BrowsingPois_5_NativeDetailScreen\js\myjsondata.js" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\.DS_Store" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\js\fromLocalResource.js" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\4_ObtainPoiData_2_FromLocalResource\js\myJsonData.js" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\binding\iOS\Wikitude.iOS.csproj">
+      <Project>{273637CB-AC56-4C20-B57A-CCB74E2C19E4}</Project>
+      <Name>Wikitude.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="ViewController\PresentingPoiDetails\PoiDetailViewController_iPhone.xib" />
+    <InterfaceDefinition Include="ViewController\PresentingPoiDetails\PoiDetailViewController_iPad.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+  </ItemGroup>
+</Project>
